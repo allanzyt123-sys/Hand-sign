@@ -1,0 +1,105 @@
+/* Translator Interface */
+.translator-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .translator-container {
+    flex-direction: row;
+  }
+  .translator-column {
+    width: 50%;
+  }
+}
+.camera-container {
+  position: relative;
+  aspect-ratio: 16/9;
+  background-color: var(--color-gray-800);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.camera-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-500);
+}
+.camera-placeholder-content {
+  text-align: center;
+}
+.camera-placeholder-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem auto;
+  opacity: 0.5;
+}
+.camera-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spinner {
+  width: 4rem;
+  height: 4rem;
+  border: 4px solid;
+  border-color: var(--color-violet) transparent var(--color-violet) var(--color-violet);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.translation-output {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.translating-indicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.indicator-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--color-green-500);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.indicator-text {
+  font-size: 0.875rem;
+  color: var(--color-green-600);
+}
+.translation-text-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.translation-text {
+  font-size: 1.5rem;
+  color: var(--color-gray-700);
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.translation-placeholder {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-500);
+  text-align: center;
+}
+.translation-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.translation-footer-text {
+  font-size: 0.875rem;
+  color: var(--color-gray-500);
+}
